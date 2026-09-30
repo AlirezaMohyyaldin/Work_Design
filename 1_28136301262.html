@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آکادمی آموزشی مدرن</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #fff5f7;
+        color: #4a4a4a;
+        overflow-x: hidden;
+      }
+
+      .A {
+        background-color: #ffffff;
+        border-bottom: 1px solid #ffe3e8;
+        padding: 10px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+      }
+
+      .A1 {
+        display: flex;
+        gap: 20px;
+        color: #777;
+      }
+
+      .A2 {
+        background-color: #ffb6c1;
+        color: white;
+        text-decoration: none;
+        padding: 5px 15px;
+        border-radius: 20px;
+        transition: 0.3s;
+      }
+
+      .A2:hover {
+        background-color: #ff99aa;
+      }
+
+      .B {
+        background-color: #ffffff;
+        padding: 10px 5%;
+        box-shadow: 0 4px 15px rgba(255, 182, 193, 0.1);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .C {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        z-index: 1000;
+      }
+
+      .C1 {
+        position: relative;
+        cursor: pointer;
+        padding: 15px 0;
+        font-weight: bold;
+        color: #555;
+        font-size: 0.95rem;
+        white-space: nowrap;
+      }
+
+      .C1:hover {
+        color: #ff7388;
+      }
+
+      .C2 {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        min-width: 240px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        border: 1px solid #ffe3e8;
+        padding: 10px 0;
+      }
+
+      .C2 li {
+        position: relative;
+        list-style: none;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.2s;
+      }
+
+      .C2 li:hover {
+        background-color: #fff0f2;
+        color: #ff7388;
+      }
+
+      .C1:hover .C2 {
+        display: block;
+      }
+
+      .C3 {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        background-color: #ffffff;
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        border: 1px solid #ffe3e8;
+      }
+
+      .C3 a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #666;
+        font-size: 0.85rem;
+      }
+
+      .C3 a:hover {
+        background-color: #fff0f2;
+        color: #ff7388;
+      }
+
+      .C2 li:hover .C3 {
+        display: block;
+      }
+      .D {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .D1 {
+        display: flex;
+        background-color: #fff5f7;
+        border: 1px solid #ffe3e8;
+        border-radius: 30px;
+        padding: 8px 20px;
+        width: 100%;
+        max-width: 500px;
+        transition: 0.3s;
+      }
+
+      .D1:focus-within {
+        border-color: #ffb6c1;
+        box-shadow: 0 0 8px rgba(255, 182, 193, 0.4);
+      }
+      .D1 input {
+        border: none;
+        background: none;
+        outline: none;
+        width: 100%;
+        font-size: 0.95rem;
+        padding-right: 10px;
+      }
+
+      .D1 button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #ff7388;
+      }
+
+      .E {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+      }
+
+      .E1 {
+        text-decoration: none;
+        color: #ff7388;
+        font-size: 1.5rem;
+        transition: 0.3s;
+      }
+
+      .E1:hover {
+        transform: translateY(-3px);
+      }
+
+      .F {
+        padding: 50px 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .F1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 1.8rem;
+        color: #ff7388;
+      }
+
+      .F4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 10px 0;
+      }
+
+      .G1 {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        border: 1px solid #ffe3e8;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: 0.4s ease;
+      }
+
+      .G1:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(255, 115, 136, 0.25);
+        border-color: #ffb6c1;
+      }
+
+      .G_TAG {
+        align-self: flex-start;
+        background: #fff0f2;
+        color: #ff4d6d;
+        font-size: 0.75rem;
+        font-weight: bold;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+      }
+
+      .G2 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        color: #333;
+      }
+
+      .G3 {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        flex-grow: 1;
+      }
+
+      .G4 {
+        background: linear-gradient(135deg, #ffccd5 0%, #ffb6c1 100%);
+        color: #ff4d6d;
+        border: none;
+        padding: 14px;
+        border-radius: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.95rem;
+        box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+      }
+
+      .G4:hover {
+        background: linear-gradient(135deg, #ff4d6d 0%, #ff7388 100%);
+        color: white;
+        box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
+      }
+
+      .H {
+        background: white;
+        margin-top: 60px;
+        padding: 50px 5%;
+        border-top: 2px solid #ffe3e8;
+      }
+
+      .H1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .H2 {
+        background: #fff5f7;
+        padding: 20px;
+        border-radius: 15px;
+        border-right: 5px solid #ffb6c1;
+        margin-bottom: 15px;
+      }
+
+      .I {
+        position: fixed;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: white;
+        padding: 15px 40px;
+        border-radius: 50px;
+        transition: 0.5s;
+        z-index: 2000;
+        border: 2px solid #ff4d6d;
+      }
+
+      .I.show {
+        bottom: 30px;
+      }
+
+      @media (max-width: 900px) {
+        .B {
+          grid-template-columns: 1fr;
+          padding: 15px 5%;
+          gap: 15px;
+        }
+
+        .C {
+          flex-direction: column;
+          gap: 5px;
+          width: 100%;
+        }
+
+        .C1 {
+          width: 100%;
+          padding: 10px;
+          background-color: #fff0f2;
+          border-radius: 8px;
+          text-align: center;
+        }
+
+        .C2 {
+          position: static;
+          box-shadow: none;
+          width: 100%;
+          border: none;
+          background-color: #fffdfd;
+          padding: 5px 0;
+        }
+
+        .C2 li {
+          flex-direction: column;
+          align-items: center;
+          padding: 8px;
+        }
+
+        .C3 {
+          position: static;
+          box-shadow: none;
+          width: 100%;
+          border: none;
+          background-color: #fff5f6;
+          margin-top: 5px;
+          text-align: center;
+        }
+
+        .D {
+          order: -1;
+        }
+
+        .E {
+          justify-content: center;
+          margin-top: 5px;
+        }
+
+        .A {
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+
+        .F4 {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+      }
+      .TOP_NAME {
+        position: relative;
+        left: 20px;
+        text-align: center;
+        padding: 0 0 0 0;
+        font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+      }
+
+      .TOP_NAME h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #ff4d6d, #ff7388, #ffb6c1, #ff4d6d);
+        background-size: 300% auto;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 5s ease infinite;
+        text-shadow: 0px 4px 10px rgba(255, 77, 109, 0.15);
+        display: inline-block;
+      }
+
+      @keyframes shine {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .TOP_NAME h1 {
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+        }
+      }
+      .CAT_SECTION {
+        max-width: 1200px;
+        margin: 40px auto 10px auto;
+        padding: 0 5%;
+        text-align: center;
+      }
+
+      .CAT_TITLE {
+        font-size: 1.6rem;
+        color: #ff4d6d;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      .CAT_SUB {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 25px;
+      }
+
+      .CAT_GRID {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .CAT_ITEM {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border: 1px solid #ffe3e8;
+        padding: 15px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #4a4a4a;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(255, 182, 193, 0.05);
+        cursor: pointer;
+      }
+
+      .CAT_ICON {
+        width: 32px;
+        height: 32px;
+        background-color: #fff0f2;
+        color: #ff4d6d;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        transition: 0.3s;
+      }
+
+      .CAT_ITEM:hover {
+        border-color: #ffb6c1;
+        background-color: #fff5f7;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(255, 115, 136, 0.15);
+      }
+
+      .CAT_ITEM:hover .CAT_ICON {
+        background-color: #ff4d6d;
+        color: white;
+      }
+
+      @media (max-width: 900px) {
+        .CAT_GRID {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+        .CAT_TITLE {
+          font-size: 1.4rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .CAT_GRID {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .CAT_ITEM {
+          padding: 12px 20px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .FREE_SECTION {
+        max-width: 1200px;
+        margin: 60px auto 20px auto;
+        padding: 0 5%;
+      }
+
+      .FREE_HEADER {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffe3e8;
+        padding-bottom: 15px;
+      }
+
+      .FREE_TITLE {
+        font-size: 1.6rem;
+        color: #ff4d6d;
+        font-weight: bold;
+      }
+
+      .SEE_ALL_BTN {
+        color: #ff7388;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .SEE_ALL_BTN:hover {
+        color: #ff4d6d;
+        transform: translateX(-5px);
+      }
+
+      .FILTER_BAR {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        white-space: nowrap;
+      }
+
+      .FILTER_BAR::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .FILTER_TAB {
+        background: white;
+        border: 1px solid #ffe3e8;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: #666;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .FILTER_TAB.active,
+      .FILTER_TAB:hover {
+        background-color: #ff4d6d;
+        color: white;
+        border-color: #ff4d6d;
+      }
+
+      .FREE_GRID {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .FREE_CARD {
+        background: white;
+        border-radius: 15px;
+        border: 1px solid #ffe3e8;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+      }
+
+      .FREE_CARD:hover {
+        transform: translateY(-5px);
+        border-color: #ffb6c1;
+        box-shadow: 0 8px 20px rgba(255, 115, 136, 0.15);
+      }
+
+      .FREE_IMG_BOX {
+        background: linear-gradient(135deg, #fff0f2 0%, #ffe3e8 100%);
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        position: relative;
+      }
+
+      .BOOKMARK {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        color: #ff7388;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+
+      .FREE_CONTENT {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .FREE_CONTENT h3 {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 12px;
+        line-height: 1.5;
+        height: 45px;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .FREE_INFO {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: #777;
+        margin-bottom: 15px;
+        border-bottom: 1px dashed #ffe3e8;
+        padding-bottom: 10px;
+      }
+      .FREE_FOOTER {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+      }
+
+      .START_LEARN {
+        color: #ff4d6d;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .FREE_BADGE {
+        background-color: #e6fffa;
+        color: #00a389;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 3px 10px;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 1024px) {
+        .FREE_GRID {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .FREE_GRID {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+        .FREE_TITLE {
+          font-size: 1.3rem;
+        }
+      }
+      .G4.in-cart,
+      .START_LEARN.in-cart {
+        background: linear-gradient(
+          135deg,
+          #e2e8f0 0%,
+          #cbd5e1 100%
+        ) !important;
+        color: #64748b !important;
+        box-shadow: none !important;
+      }
+      .G4.in-cart:hover {
+        background: linear-gradient(
+          135deg,
+          #f1f5f9 0%,
+          #e2e8f0 100%
+        ) !important;
+        color: #475569 !important;
+      }
+
+      .CERT_SECTION {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 5%;
+      }
+
+      .CERT_BANNER {
+        background: linear-gradient(135deg, #fff5f7 0%, #fff0f2 100%);
+        border: 1px solid #ffe3e8;
+        border-radius: 24px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 40px;
+        box-shadow: 0 10px 30px rgba(255, 182, 193, 0.15);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .CERT_CONTENT {
+        z-index: 2;
+      }
+
+      .CERT_TITLE {
+        font-size: 1.8rem;
+        color: #ff4d6d;
+        margin-bottom: 15px;
+        font-weight: 800;
+      }
+
+      .CERT_TEXT {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        text-align: justify;
+      }
+
+      .CERT_BTN {
+        display: inline-block;
+        background: linear-gradient(135deg, #ff4d6d 0%, #ff7388 100%);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 0.95rem;
+        box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .CERT_BTN:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(255, 77, 109, 0.45);
+        background: linear-gradient(135deg, #ff2a51 0%, #ff526f 100%);
+      }
+
+      .CERT_VISUAL {
+        position: relative;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+      }
+
+      .CERT_CARD_1 {
+        width: 260px;
+        height: 160px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border: 2px solid white;
+        border-radius: 16px;
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.15);
+        padding: 15px;
+        position: absolute;
+        z-index: 5;
+        transform: rotateY(-15deg) rotateX(10deg) translateZ(20px);
+        transition: 0.5s ease;
+      }
+
+      .CERT_CARD_2 {
+        width: 260px;
+        height: 160px;
+        background: linear-gradient(135deg, #ffccd5 0%, #ffb6c1 100%);
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        position: absolute;
+        z-index: 4;
+        transform: rotateY(-20deg) rotateX(10deg) translateX(-40px)
+          translateY(-15px) translateZ(-20px);
+        transition: 0.5s ease;
+        opacity: 0.8;
+      }
+
+      .CERT_BANNER:hover .CERT_CARD_1 {
+        transform: rotateY(-5deg) rotateX(5deg) translateZ(40px)
+          translateY(-5px);
+      }
+
+      .CERT_BANNER:hover .CERT_CARD_2 {
+        transform: rotateY(-10deg) rotateX(5deg) translateX(-60px)
+          translateY(-5px) translateZ(0px);
+        opacity: 1;
+      }
+
+      .CERT_LINE {
+        height: 6px;
+        background-color: #ffe3e8;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .CERT_BADGE {
+        width: 35px;
+        height: 35px;
+        background: #ff4d6d;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.7rem;
+      }
+
+      @media (max-width: 900px) {
+        .CERT_BANNER {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 30px 20px;
+          gap: 20px;
+        }
+        .CERT_TEXT {
+          text-align: center;
+        }
+        .CERT_VISUAL {
+          order: -1;
+          height: 180px;
+          margin-bottom: 10px;
+        }
+        .CERT_CARD_1,
+        .CERT_CARD_2 {
+          width: 220px;
+          height: 140px;
+        }
+      }
+      .FEATURES_ROW {
+        background-color: white;
+        border-top: 1px solid #ffe3e8;
+        border-bottom: 1px solid #ffe3e8;
+        padding: 40px 5%;
+        margin-top: 50px;
+      }
+
+      .FEATURES_GRID {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .FEATURE_BOX {
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .FEATURE_BOX:hover {
+        transform: translateY(-5px);
+      }
+
+      .FEATURE_ICON_WRAP {
+        width: 70px;
+        height: 70px;
+        background: #fff5f7;
+        border-radius: 20px;
+        margin: 0 auto 15px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #ff4d6d;
+        box-shadow: 0 8px 15px rgba(255, 77, 109, 0.1);
+        border: 1px solid #ffe3e8;
+      }
+
+      .FEATURE_BOX p {
+        font-weight: bold;
+        color: #555;
+        font-size: 0.9rem;
+      }
+
+      .MEGA_FOOTER {
+        background-color: #fffafb;
+        padding: 60px 5% 30px 5%;
+      }
+
+      .FOOTER_GRID {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+      }
+
+      .FOOTER_COL h4 {
+        color: #ff4d6d;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 800;
+      }
+
+      .FOOTER_COL ul {
+        list-style: none;
+      }
+
+      .FOOTER_COL ul li {
+        margin-bottom: 12px;
+      }
+
+      .FOOTER_COL ul li a {
+        text-decoration: none;
+        color: #777;
+        font-size: 0.85rem;
+        transition: 0.3s;
+      }
+
+      .FOOTER_COL ul li a:hover {
+        color: #ff4d6d;
+        padding-right: 5px;
+      }
+
+      .MORE_LINK {
+        display: block;
+        margin-top: 15px;
+        color: #aaa;
+        font-size: 0.8rem;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .MORE_LINK:hover {
+        color: #ff7388;
+      }
+
+      @media (max-width: 1024px) {
+        .FOOTER_GRID {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .FEATURES_GRID {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .FOOTER_GRID {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .FEATURES_GRID {
+          grid-template-columns: 1fr;
+        }
+        .FEATURE_ICON_WRAP {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="A">
+      <div class="A1">
+        <span>📞 02198765432</span>
+        <span>📧 support@academy.ir</span>
+      </div>
+      <div class="TOP_NAME">
+        <h1>Modern Learning Academy</h1>
+      </div>
+      <a href="sighn.html" class="A2">ورود / عضویت</a>
+    </header>
+
+    <nav class="B">
+      <ul class="C">
+        <li class="C1">صفحه اصلی</li>
+        <li class="C1">
+          📂 دسته بندی های آموزشی 👇
+          <ul class="C2">
+            <li>
+              🤖 هوش مصنوعی ◀
+              <div class="C3">
+                <a href="#">مدل های زبانی</a>
+                <a href="#">آمار و داده کاوی</a>
+                <a href="#">یادگیری عمیق</a>
+                <a href="#">تحلیل داده</a>
+              </div>
+            </li>
+            <li>
+              🎨 طراحی ◀
+              <div class="C3">
+                <a href="#">پریمیر (Premiere)</a>
+                <a href="#">افترافکت</a>
+                <a href="#">طراحی گرافیکی</a>
+                <a href="#">فتوشاپ</a>
+                <a href="#">طراحی سایت</a>
+              </div>
+            </li>
+            <li>
+              💻 برنامه نویسی ◀
+              <div class="C3">
+                <a href="#">React & Next.js</a>
+                <a href="#">Python Expert</a>
+              </div>
+            </li>
+            <li>
+              🚀 توسعه فردی ◀
+              <div class="C3">
+                <a href="#">مدیریت زمان</a>
+                <a href="#">فن بیان</a>
+              </div>
+            </li>
+            <li>
+              💼 کسب و کار ◀
+              <div class="C3">
+                <a href="#">استارتاپ</a>
+                <a href="#">بازاریابی دیجیتال</a>
+              </div>
+            </li>
+            <li>
+              🌍 زبان های خارجه ◀
+              <div class="C3">
+                <a href="#">انگلیسی</a>
+                <a href="#">آلمانی</a>
+                <a href="#">روسی</a>
+              </div>
+            </li>
+            <li>
+              🖥️ فناوری اطلاعات ◀
+              <div class="C3">
+                <a href="#">شبکه</a>
+                <a href="#">امنیت</a>
+              </div>
+            </li>
+            <li>
+              📊 اقتصاد و حسابداری ◀
+              <div class="C3">
+                <a href="#">بورس</a>
+                <a href="#">حسابداری مالی</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="C1">
+          👨‍🏫 اساتید دوره 👇
+          <ul class="C2">
+            <li>
+              استاد علی محمدی ◀
+              <div class="C3">
+                <a href="#">دوره یادگیری عمیق</a>
+                <a href="#">دوره تحلیل داده</a>
+              </div>
+            </li>
+            <li>
+              استاد مریم رضایی ◀
+              <div class="C3">
+                <a href="#">فتوشاپ پیشرفته</a>
+                <a href="#">طراحی رابط کاربری</a>
+              </div>
+            </li>
+            <li>
+              استاد سعید راد ◀
+              <div class="C3">
+                <a href="#">برنامه‌نویسی پایتون</a>
+                <a href="#">امنیت شبکه</a>
+              </div>
+            </li>
+            <li>
+                استاد فرشید شیرافکن ◀
+                <div class="C3">
+                  <a href="#">آموزش جمع و تفریق</a>
+                  <a href="#">آموزش زبان برنامه نویسی</a>
+                </div>
+              </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="D">
+        <div class="D1">
+          <input
+            type="text"
+            placeholder="نام دوره، استاد یا مهارت مورد نظر..."
+          />
+          <button>🔍</button>
+        </div>
+      </div>
+      <div class="E">
+        <a href="#" class="E1" title="سبد خرید">
+          🛒
+          <span
+            id="cartCount"
+            style="
+              font-size: 1rem;
+              background: #ff4d6d;
+              color: white;
+              padding: 2px 7px;
+              border-radius: 50%;
+              vertical-align: top;
+              margin-right: -10px;
+            "
+            >0</span
+          >
+        </a>
+        <a href="sighn.html" class="E1" title="حساب کاربری">👤</a>
+      </div>
+    </nav>
+    <section class="CAT_SECTION">
+      <h2 class="CAT_TITLE">فصل یادگیری و مهارت</h2>
+      <p class="CAT_SUB">
+        تمام آموزش‌های مرتبط با حوزه مورد نظر خود را یکجا پیدا کنید.
+      </p>
+
+      <div class="CAT_GRID">
+        <a href="#" class="CAT_ITEM">
+          <span>🤖 هوش مصنوعی و داده</span>
+          <span class="CAT_ICON">⚡</span>
+        </a>
+        <a href="#" class="CAT_ITEM">
+          <span>💻 برنامه نویسی وب</span>
+          <span class="CAT_ICON">⚙️</span>
+        </a>
+        <a href="#" class="CAT_ITEM">
+          <span>🎨 طراحی گرافیک و تدوین</span>
+          <span class="CAT_ICON">✨</span>
+        </a>
+        <a href="#" class="CAT_ITEM">
+          <span>💼 کسب و کار و مارکتینگ</span>
+          <span class="CAT_ICON">📈</span>
+        </a>
+        <a href="#" class="CAT_ITEM">
+          <span>🚀 توسعه فردی و مدیریت</span>
+          <span class="CAT_ICON">⏱️</span>
+        </a>
+        <a href="#" class="CAT_ITEM">
+          <span>🌍 زبان‌های خارجه</span>
+          <span class="CAT_ICON">🗣️</span>
+        </a>
+      </div>
+    </section>
+    <main class="F">
+      <h2 class="F1">🎯 دوره‌های پیشنهادی برای شما</h2>
+
+      <div class="F4">
+        <div class="G1">
+          <span class="G_TAG">هوش مصنوعی</span>
+          <h3 class="G2">🧠 مدل‌های زبانی بزرگ (LLM)</h3>
+          <p class="G3">
+            آموزش معماری ترنسفورمرها و نحوه توسعه و شخصی‌سازی چت‌بات‌های پیشرفته
+            هوش مصنوعی.
+          </p>
+          <button class="G4" onclick="toggleCart('مدل‌های زبانی', this)">
+            ثبت نام سریع
+          </button>
+        </div>
+        <div class="G1">
+          <span class="G_TAG">طراحی</span>
+          <h3 class="G2">🎬 تدوین حرفه‌ای با پریمیر</h3>
+          <p class="G3">
+            آموزش صفر تا صد اصلاح رنگ، کات، صداگذاری و ترفندهای تدوین کلیپ‌های
+            یوتیوب و اینستاگرام.
+          </p>
+          <button class="G4" onclick="toggleCart('تدوین حرفه‌ای', this)">
+            ثبت نام سریع
+          </button>
+        </div>
+        <div class="G1">
+          <span class="G_TAG">برنامه نویسی</span>
+          <h3 class="G2">🌐 فرانت‌اند با React & Next.js</h3>
+          <p class="G3">
+            ورود به بازار کار بین‌المللی با یادگیری محبوب‌ترین فریم‌ورک
+            جاوااسکریپت به همراه پروژه‌های واقعی.
+          </p>
+          <button class="G4" onclick="toggleCart('React & Next.js', this)">
+            ثبت نام سریع
+          </button>
+        </div>
+
+        <div class="G1">
+          <span class="G_TAG">توسعه فردی</span>
+          <h3 class="G2">⏱️ مدیریت زمان و هوش اجرایی</h3>
+          <p class="G3">
+            تکنیک‌های علمی برای رهایی از تنبلی، افزایش تمرکز شدید و ساختن
+            روتین‌های روزانه موفق.
+          </p>
+          <button class="G4" onclick="toggleCart('مدیریت زمان', this)">
+            ثبت نام سریع
+          </button>
+        </div>
+        <div class="G1">
+          <span class="G_TAG">کسب و کار</span>
+          <h3 class="G2">📈 دیجیتال مارکتینگ و فروش</h3>
+          <p class="G3">
+            آموزش اصول تبلیغات آنلاین، سئو (SEO)، ساخت کمپین‌های موفق و افزایش ۳
+            برابری فروش سایت.
+          </p>
+          <button class="G4" onclick="toggleCart('دیجیتال مارکتینگ', this)">
+            ثبت نام سریع
+          </button>
+        </div>
+        <div class="G1">
+          <span class="G_TAG">زبان</span>
+          <h3 class="G2">🇬🇧 آیلتس تضمینی (IELTS)</h3>
+          <p class="G3">
+            آموزش استراتژی‌های چهارگانه آزمون آیلتس با تمرکز روی اسپیکینگ و
+            رایتینگ برای کسب نمره بالای ۷.
+          </p>
+          <button class="G4" onclick="toggleCart('(IELTS)', this)">
+            ثبت نام سریع
+          </button>
+        </div>
+      </div>
+    </main>
+    <section class="FREE_SECTION">
+      <div class="FREE_HEADER">
+        <h2 class="FREE_TITLE">🎁 آموزش‌های پرمخاطب رایگان</h2>
+        <a href="#" class="SEE_ALL_BTN">مشاهده همه ←</a>
+      </div>
+
+      <div class="FILTER_BAR" id="filterBar">
+        <span class="FILTER_TAB active" data-filter="all">همه</span>
+        <span class="FILTER_TAB" data-filter="programming">برنامه‌نویسی</span>
+        <span class="FILTER_TAB" data-filter="ai">هوش مصنوعی</span>
+        <span class="FILTER_TAB" data-filter="design">طراحی گرافیک</span>
+        <span class="FILTER_TAB" data-filter="skills">توسعه فردی</span>
+      </div>
+
+      <div class="FREE_GRID" id="freeGrid">
+        <div class="FREE_CARD" data-category="programming">
+          <div class="FREE_IMG_BOX">
+            🐍
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش برنامه‌نویسی پایتون سریع و آسان</h3>
+            <div class="FREE_INFO">
+              <span>👤 پژمان اقبالی</span>
+              <span>⏱️ ۲ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('پایتون رایگان',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">رایگان</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="FREE_CARD" data-category="skills">
+          <div class="FREE_IMG_BOX">
+            📊
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش اکسل (Excel) سریع و کاربردی</h3>
+            <div class="FREE_INFO">
+              <span>👤 امیررضا نیکخواه</span>
+              <span>⏱️ ۳ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('اکسل رایگان',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">رایگان</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="FREE_CARD" data-category="ai">
+          <div class="FREE_IMG_BOX">
+            🤖
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>مقدمه‌ای بر هوش مصنوعی و یادگیری ماشین</h3>
+            <div class="FREE_INFO">
+              <span>👤 دکتر علی محمدی</span>
+              <span>⏱️ ۱.۵ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('هوش مصنوعی رایگان',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">رایگان</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="FREE_CARD" data-category="skills">
+          <div class="FREE_IMG_BOX">
+            🗣️
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش فن بیان و تکنیک‌های صحبت در جمع</h3>
+            <div class="FREE_INFO">
+              <span>👤 آذین مرادی</span>
+              <span>⏱️ ۴۵ دقیقه</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('فن بیان رایگان',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">رایگان</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="FREE_CARD" data-category="design">
+          <div class="FREE_IMG_BOX">
+            🎨
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش فتوشاپ اکسپرس و طراحی پوستر</h3>
+            <div class="FREE_INFO">
+              <span>👤 مریم رضایی</span>
+              <span>⏱️ ۲.۵ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('فتوشاپ ',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">4,500,000 تومان</span>
+            </div>
+          </div>
+        </div>
+        <div class="FREE_CARD" data-category="skills">
+          <div class="FREE_IMG_BOX">
+            📊
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش جمع و تفریق فرایندی</h3>
+            <div class="FREE_INFO">
+              <span>👤 فرشید شیرافکن</span>
+              <span>⏱️ ۲.۵ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('جمع و تفریق',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">280,000 تومان</span>
+            </div>
+          </div>
+        </div>
+        <div class="FREE_CARD" data-category="programming">
+          <div class="FREE_IMG_BOX">
+            🐍
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش برنامه‌نویسی React & Next.js</h3>
+            <div class="FREE_INFO">
+              <span>👤 فرشید شیرافکن</span>
+              <span>⏱️ ۲.۵ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('React & Next.js',this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">3,500,000 تومان</span>
+            </div>
+          </div>
+        </div>
+        <div class="FREE_CARD" data-category="programming">
+          <div class="FREE_IMG_BOX">
+            🐍
+            <span class="BOOKMARK" title="نشان کردن">🔖</span>
+          </div>
+          <div class="FREE_CONTENT">
+            <h3>آموزش GITHUB</h3>
+            <div class="FREE_INFO">
+              <span>👤 جادی</span>
+              <span>⏱️ ۳ ساعت</span>
+            </div>
+            <div class="FREE_FOOTER">
+              <a
+                href="#"
+                class="START_LEARN"
+                onclick="event.preventDefault(); toggleCart('GITHUB', this)"
+                >شروع یادگیری ←</a
+              >
+              <span class="FREE_BADGE">500,000 تومان</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="CERT_SECTION">
+      <div class="CERT_BANNER">
+        <div class="CERT_CONTENT">
+          <h2 class="CERT_TITLE">🎓 یادگیری و گواهی‌نامه رسمی</h2>
+          <p class="CERT_TEXT">
+            با قبولی در آزمون آنلاین هر دوره، گواهی‌نامه معتبر و رسمی آکادمی را
+            به دو زبان فارسی و انگلیسی دریافت کنید. شما می‌توانید این گواهی‌نامه
+            را مستقیماً به رزومه خود در لینکدین متصل کرده و تخصص خود را به
+            کارفرمایان سراسر جهان نمایش دهید.
+          </p>
+          <a href="#" class="CERT_BTN">مشاهده دوره‌های دارای گواهی‌نامه</a>
+        </div>
+
+        <div class="CERT_VISUAL">
+          <div class="CERT_CARD_2"></div>
+
+          <div class="CERT_CARD_1">
+            <div
+              class="CERT_LINE"
+              style="width: 60%; background-color: #ff4d6d"
+            ></div>
+            <div class="CERT_LINE" style="width: 85%"></div>
+            <div class="CERT_LINE" style="width: 40%"></div>
+            <div class="CERT_LINE" style="width: 70%; margin-top: 20px"></div>
+            <div class="CERT_BADGE">★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="H">
+      <div class="H1">
+        <div>
+          <h3 style="color: #ff7388; margin-bottom: 15px">نظرات برتر</h3>
+          <div class="H2">
+            <strong>نرگس:</strong> دوره‌ها بسیار با کیفیت هستند و اساتید با
+            حوصله پاسخ می‌دهند.
+          </div>
+          <div class="H2">
+            <strong>حسین:</strong> بخش جستجوی سایت خیلی سریع دوره مورد نظرم را
+            پیدا کرد.
+          </div>
+        </div>
+        <div>
+          <h3 style="color: #ff7388; margin-bottom: 15px">درباره آکادمی</h3>
+          <p style="line-height: 1.8; font-size: 0.9rem; color: #666">
+            هدف ما فراهم کردن دسترسی آسان و ارزان به آموزش‌های با کیفیت
+            بین‌المللی برای تمام فارسی‌زبانان دنیاست. ما معتقدیم یادگیری هیچ
+            مرزی ندارد.
+          </p>
+        </div>
+      </div>
+      <div class="FEATURES_ROW">
+        <div class="FEATURES_GRID">
+          <div class="FEATURE_BOX">
+            <div class="FEATURE_ICON_WRAP">🛡️</div>
+            <p>تضمین کیفیت آموزش</p>
+          </div>
+          <div class="FEATURE_BOX">
+            <div class="FEATURE_ICON_WRAP">♾️</div>
+            <p>دسترسی آنی و همیشگی</p>
+          </div>
+          <div class="FEATURE_BOX">
+            <div class="FEATURE_ICON_WRAP">🕒</div>
+            <p>هزاران ساعت آموزش</p>
+          </div>
+          <div class="FEATURE_BOX">
+            <div class="FEATURE_ICON_WRAP">📜</div>
+            <p>گواهینامه پایان دوره</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="MEGA_FOOTER">
+        <div class="FOOTER_GRID">
+          <div class="FOOTER_COL">
+            <h4>💻 علوم کامپیوتر</h4>
+            <ul>
+              <li><a href="#">داده‌کاوی و یادگیری ماشین</a></li>
+              <li><a href="#">لینوکس (Linux)</a></li>
+              <li><a href="#">پایتون (Python)</a></li>
+              <li><a href="#">هوش مصنوعی</a></li>
+            </ul>
+            <a href="#" class="MORE_LINK">موارد بیشتر ←</a>
+          </div>
+
+          <div class="FOOTER_COL">
+            <h4>🎨 طراحی و گرافیک</h4>
+            <ul>
+              <li><a href="#">نرم‌افزارهای Adobe</a></li>
+              <li><a href="#">گرافیک کامپیوتری</a></li>
+              <li><a href="#">اتوکد و طراحی مهندسی</a></li>
+              <li><a href="#">انیمیشن‌سازی</a></li>
+            </ul>
+            <a href="#" class="MORE_LINK">موارد بیشتر ←</a>
+          </div>
+
+          <div class="FOOTER_COL">
+            <h4>📊 اقتصاد و حسابداری</h4>
+            <ul>
+              <li><a href="#">ارزهای دیجیتال</a></li>
+              <li><a href="#">بورس و تحلیل تکنیکال</a></li>
+              <li><a href="#">حسابداری</a></li>
+              <li><a href="#">علوم اقتصادی و مالی</a></li>
+            </ul>
+            <a href="#" class="MORE_LINK">موارد بیشتر ←</a>
+          </div>
+
+          <div class="FOOTER_COL">
+            <h4>🌍 زبان‌های خارجی</h4>
+            <ul>
+              <li><a href="#">زبان انگلیسی</a></li>
+              <li><a href="#">آمادگی آزمون‌های زبان</a></li>
+              <li><a href="#">زبان آلمانی</a></li>
+              <li><a href="#">زبان فرانسه</a></li>
+            </ul>
+            <a href="#" class="MORE_LINK">موارد بیشتر ←</a>
+          </div>
+
+          <div class="FOOTER_COL">
+            <h4>🎓 دانشگاهی</h4>
+            <ul>
+              <li><a href="#">مهندسی معماری</a></li>
+              <li><a href="#">مهندسی عمران</a></li>
+              <li><a href="#">مهندسی مکانیک</a></li>
+              <li><a href="#">برق و الکترونیک</a></li>
+            </ul>
+            <a href="#" class="MORE_LINK">موارد بیشتر ←</a>
+          </div>
+
+          <div class="FOOTER_COL">
+            <h4>⚙️ سایر دسته‌ها</h4>
+            <ul>
+              <li><a href="#">آموزش‌های عمومی</a></li>
+              <li><a href="#">ICDL و مهارت‌های پایه</a></li>
+              <li><a href="#">مهارت‌های مطالعه</a></li>
+              <li><a href="#">نوجوانان</a></li>
+            </ul>
+            <a href="#" class="MORE_LINK">موارد بیشتر ←</a>
+          </div>
+        </div>
+
+        <hr
+          style="
+            border: 0;
+            border-top: 1px solid #ffe3e8;
+            margin: 40px 0 20px 0;
+          "
+        />
+        <p style="text-align: center; color: #aaa; font-size: 0.8rem">
+          تمامی حقوق برای آکادمی آموزشی مدرن محفوظ است © 2026
+        </p>
+      </footer>
+    </footer>
+
+    <div id="msg" class="I">دوره به سبد خرید اضافه شد 🎉</div>
+    <script>
+      let cart = JSON.parse(localStorage.getItem("academy_cart")) || [];
+      const cartCountElement = document.getElementById("cartCount");
+
+      function syncCartUI() {
+        cartCountElement.innerText = cart.length;
+
+        document.querySelectorAll(".G4").forEach((btn) => {
+          const onClickAttr = btn.getAttribute("onclick") || "";
+          const match = onClickAttr.match(/'([^']+)'/);
+          if (match && match[1]) {
+            const courseName = match[1];
+            if (cart.includes(courseName)) {
+              btn.classList.add("in-cart");
+              btn.innerText = "حذف از سبد";
+            } else {
+              btn.classList.remove("in-cart");
+              btn.innerText = "ثبت نام سریع";
+            }
+          }
+        });
+
+        document.querySelectorAll(".FREE_CARD").forEach((card) => {
+          const title = card.querySelector(".FREE_CONTENT h3").innerText.trim();
+          const btn = card.querySelector(".START_LEARN");
+          if (btn) {
+            if (cart.includes(title)) {
+              btn.classList.add("in-cart");
+              btn.innerText = "حذف از سبد";
+            } else {
+              btn.classList.remove("in-cart");
+              btn.innerText = "شروع یادگیری ←";
+            }
+          }
+        });
+      }
+
+      function saveCart() {
+        localStorage.setItem("academy_cart", JSON.stringify(cart));
+        cartCountElement.innerText = cart.length;
+      }
+
+      function toggleCart(courseName, buttonElement) {
+        if (cart.includes(courseName)) {
+          cart = cart.filter((item) => item !== courseName);
+          buttonElement.classList.remove("in-cart");
+
+          if (buttonElement.classList.contains("START_LEARN")) {
+            buttonElement.innerText = "شروع یادگیری ←";
+          } else {
+            buttonElement.innerText = "ثبت نام سریع";
+          }
+
+          showNotification("دوره «" + courseName + "» از سبد خرید حذف شد ❌");
+        } else {
+          cart.push(courseName);
+          buttonElement.classList.add("in-cart");
+          buttonElement.innerText = "حذف از سبد";
+          showNotification("دوره «" + courseName + "» به سبد خرید اضافه شد 🎉");
+        }
+        saveCart();
+      }
+
+      function showNotification(text) {
+        const m = document.getElementById("msg");
+        m.innerText = text;
+        m.classList.add("show");
+        setTimeout(() => {
+          m.classList.remove("show");
+        }, 3000);
+      }
+
+      document.addEventListener("DOMContentLoaded", syncCartUI);
+    </script>
+    <script>
+      const tabs = document.querySelectorAll("#filterBar .FILTER_TAB");
+      const cards = document.querySelectorAll("#freeGrid .FREE_CARD");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          const filterValue = tab.getAttribute("data-filter");
+
+          cards.forEach((card) => {
+            const cardCategory = card.getAttribute("data-category");
+
+            if (filterValue === "all" || filterValue === cardCategory) {
+              card.style.display = "flex";
+              card.style.opacity = "0";
+              setTimeout(() => {
+                card.style.opacity = "1";
+              }, 50);
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      const searchInput = document.querySelector(".D1 input");
+
+      if (searchInput) {
+        searchInput.addEventListener("input", function (e) {
+          const query = e.target.value.toLowerCase().trim();
+
+          const allButtons = document.querySelectorAll(".G4, .START_LEARN");
+          const allCourseCards = [];
+
+          allButtons.forEach((btn) => {
+            const parentCard = btn.closest(".FREE_CARD") || btn.parentElement;
+            if (parentCard && !allCourseCards.includes(parentCard)) {
+              allCourseCards.push(parentCard);
+            }
+          });
+
+          if (query === "") {
+            allCourseCards.forEach((card) =>
+              card.classList.remove("search-highlight")
+            );
+            return;
+          }
+
+          let foundCard = null;
+
+          allCourseCards.forEach((card) => {
+            const cardText = card.innerText.toLowerCase();
+
+            if (cardText.includes(query)) {
+              card.classList.add("search-highlight");
+              if (!foundCard) foundCard = card;
+            } else {
+              card.classList.remove("search-highlight");
+            }
+          });
+
+          if (foundCard) {
+            foundCard.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

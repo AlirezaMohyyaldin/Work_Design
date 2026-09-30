@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت‌نام در آکادمی مدرن</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #fff0f2 0%, #ffe3e8 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .REG_CONTAINER {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid white;
+        max-width: 950px;
+        width: 100%;
+        border-radius: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.12);
+      }
+
+      .REG_SIDEBAR {
+        background: linear-gradient(135deg, #ff4d6d 0%, #ff7388 100%);
+        padding: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+
+      .REG_SIDEBAR h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        font-weight: 800;
+      }
+
+      .REG_SIDEBAR p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        opacity: 0.9;
+      }
+
+      .CIRCLE {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+      .C1 {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+        right: -50px;
+      }
+      .C2 {
+        width: 100px;
+        height: 100px;
+        bottom: -30px;
+        left: -30px;
+      }
+
+      .REG_FORM_BOX {
+        padding: 50px 40px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+
+      .BACK_HOME_BTN {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        text-decoration: none;
+        color: #ff4d6d;
+        font-size: 0.85rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 12px;
+        background-color: #fff5f7;
+        border: 1px solid #ffe3e8;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .BACK_HOME_BTN:hover {
+        background-color: #ff4d6d;
+        color: white;
+        box-shadow: 0 4px 10px rgba(255, 77, 109, 0.2);
+      }
+
+      .FORM_TITLE {
+        color: #333;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+
+      .FORM_TITLE span {
+        color: #ff4d6d;
+      }
+
+      .INPUT_GROUP {
+        position: relative;
+        margin-bottom: 22px;
+      }
+
+      .INPUT_GROUP label {
+        display: block;
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .INPUT_GROUP input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #ffe3e8;
+        background-color: #fffafb;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        color: #333;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .INPUT_GROUP input:focus {
+        border-color: #ff4d6d;
+        background-color: white;
+        box-shadow: 0 0 0 4px rgba(255, 77, 109, 0.1);
+      }
+
+      .SUBMIT_BTN {
+        width: 100%;
+        background: linear-gradient(135deg, #ff4d6d 0%, #ff7388 100%);
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(255, 77, 109, 0.25);
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+
+      .SUBMIT_BTN:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(255, 77, 109, 0.35);
+      }
+
+      .LOGIN_LINK {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 0.85rem;
+        color: #777;
+      }
+
+      .LOGIN_LINK a {
+        color: #ff4d6d;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      .LOGIN_LINK a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .REG_CONTAINER {
+          grid-template-columns: 1fr;
+          max-width: 450px;
+        }
+
+        .REG_SIDEBAR {
+          display: none;
+        }
+
+        .REG_FORM_BOX {
+          padding: 50px 25px 40px 25px;
+        }
+
+        .FORM_TITLE {
+          font-size: 1.4rem;
+          text-align: center;
+          margin-bottom: 25px;
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="REG_CONTAINER">
+      <div class="REG_SIDEBAR">
+        <div class="CIRCLE C1"></div>
+        <div class="CIRCLE C2"></div>
+        <h2>Modern Academy</h2>
+        <p>
+          قدم گذاشتن در مسیر مهارت و تخصص، آینده شغلی شما را تضمین می‌کند. به
+          جمع هزاران دانشجوی آکادمی آموزشی مدرن بپیوندید.
+        </p>
+      </div>
+
+      <div class="REG_FORM_BOX">
+        <a href="project.html" class="BACK_HOME_BTN">← بازگشت</a>
+
+        <h1 class="FORM_TITLE">ایجاد <span>حساب کاربری</span></h1>
+
+        <form
+          action="#"
+          onsubmit="event.preventDefault(); alert('ثبت نام با موفقیت انجام شد! 🎉');"
+        >
+          <div class="INPUT_GROUP">
+            <label>نام و نام خانوادگی</label>
+            <input type="text" placeholder="مثلا: علی محمدی" required />
+          </div>
+
+          <div class="INPUT_GROUP">
+            <label>شماره موبایل</label>
+            <input
+              type="tel"
+              placeholder="09123456789"
+              style="text-align: left; direction: ltr"
+              required
+            />
+          </div>
+
+          <div class="INPUT_GROUP">
+            <label>رمز عبور</label>
+            <input
+              type="password"
+              placeholder="******"
+              style="text-align: left; direction: ltr"
+              required
+            />
+          </div>
+
+          <button type="submit" class="SUBMIT_BTN">عضویت در آکادمی</button>
+        </form>
+
+        <p class="LOGIN_LINK">
+          قبلاً ثبت‌نام کرده‌اید؟<a href="#">وارد شوید</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
